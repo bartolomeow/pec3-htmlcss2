@@ -1,0 +1,155 @@
+@tailwind components;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ede4d5;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav,
+body {
+  background-color: #ede4d5;
+}
+
+#hamburguerIcon {
+  display: none;
+}
+
+.list-decimal,
+.list-decimal > li {
+  list-style: decimal !important;
+}
+
+@supports (display: grid) {
+  @media (min-width: 750px) {
+    main {
+      max-width: none;
+      display: grid;
+      padding: 0;
+    }
+  }
+}
+
+img.coverphoto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+p {
+  text-align: center;
+}
+
+.fa-1x {
+  font-size: 1.5rem;
+}
+
+.bg {
+  background-image: url("/src/assets/images/background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shadowtext {
+  text-shadow: 0 0 5px #fff;
+}
+
+footer * {
+  color: #000;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  z-index: 3;
+  background-color: #eed9b4;
+}
+
+.footer-buttons {
+  width: 90%;
+}
+
+.blog-title {
+  height: 300px;
+  position: relative;
+  text-align: center;
+}
+
+.blog-title > .article-title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.article-content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+p.blockquote-text,
+p.left,
+.blockquote-footer {
+  text-align: left;
+}
+
+.blockquote-footer:before {
+  content: "— ";
+}
+
+.figure-caption {
+  width: 60%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 750px) {
+  [class*="w-"] {
+    width: 100% !important;
+  }
+
+  img.coverphoto {
+    width: 80%;
+  }
+
+  #navbarText {
+    display: none;
+  }
+
+  #hamburguerIcon {
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .article-content {
+    width: 80%;
+  }
+}
+
+@layer components {
+  .btn-nav {
+    @apply border border-black rounded py-2 px-4 hover:border-transparent hover:text-white hover:bg-black transition-colors;
+  }  
+}
